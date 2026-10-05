@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nayla Altinsoy · Portfolio BTS SIO SLAM</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#050308; --bg2:#0d0716; --card:rgba(255,143,199,.06);
+  --pink:#ff9fd0; --lav:#b9a6ff; --star:#fff1fa; --text:#efe6f5; --muted:#a999bb;
+  --line:rgba(185,166,255,.28);
+  --serif:"Cormorant Garamond",Georgia,serif; --sans:"DM Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:radial-gradient(ellipse at 50% -10%,#1d0f33 0%,var(--bg) 60%) fixed;color:var(--text);font:400 1.05rem/1.7 var(--sans);overflow-x:hidden}
+#sky{position:fixed;inset:0;width:100%;height:100%;z-index:-1}
+a{color:var(--pink)}
+:focus-visible{outline:2px solid var(--pink);outline-offset:3px}
+nav{position:sticky;top:0;z-index:5;display:flex;justify-content:center;gap:1.6rem;flex-wrap:wrap;padding:.9rem 1rem;background:rgba(5,3,8,.72);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav a{color:var(--muted);text-decoration:none;font-size:.95rem}
+nav a:hover{color:var(--pink)}
+main{max-width:920px;margin:0 auto;padding:0 1.4rem}
+section{padding:5rem 0 1rem}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.1}
+h2{font-size:clamp(2rem,5vw,2.9rem);color:var(--star);margin-bottom:.4rem}
+h2 i{color:var(--pink);font-style:italic}
+.sub{color:var(--muted);margin-bottom:2rem;max-width:56ch}
+
+/* hero */
+.hero{min-height:88vh;display:flex;flex-direction:column;justify-content:center;padding-top:3rem}
+.hero .hi{color:var(--lav);font-size:1.05rem;margin-bottom:.6rem}
+h1{font-size:clamp(3.4rem,13vw,8rem);font-style:italic;font-weight:600;color:var(--star);letter-spacing:-.02em;text-shadow:0 0 40px rgba(255,159,208,.35)}
+h1 span{display:block;color:var(--pink);padding-left:.6em}
+.role{margin-top:1.6rem;font-size:1.15rem;max-width:46ch;color:var(--text)}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.6rem}
+.chip{border:1px solid var(--line);border-radius:999px;padding:.3rem .95rem;font-size:.9rem;color:var(--lav);background:var(--card)}
+.chip.hot{border-color:var(--pink);color:var(--pink)}
+
+/* about */
+.about p{max-width:62ch;margin-bottom:1rem}
+
+/* cards */
+.grid{display:grid;gap:1.1rem;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{border:1px solid var(--line);border-radius:18px;padding:1.4rem 1.5rem;background:var(--card)}
+.card h3{font-size:1.5rem;color:var(--star);margin-bottom:.2rem}
+.card .meta{color:var(--muted);font-size:.92rem}
+.tag{display:inline-block;margin-top:.8rem;font-size:.82rem;padding:.12rem .7rem;border-radius:999px;border:1px solid var(--lav);color:var(--lav)}
+.tag.now{border-color:var(--pink);color:var(--pink)}
+
+/* skills */
+.skills{display:grid;gap:1.1rem;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.skills h3{font-size:1.6rem;margin-bottom:.8rem}
+.skills .chips{margin-top:0}
+.skills small{display:block;margin-top:.9rem;color:var(--muted);font-size:.9rem}
+
+/* projects: real sequence through the year */
+.path{position:relative;margin-left:.6rem;padding-left:2.2rem;border-left:1px dashed var(--pink)}
+.proj{position:relative;margin-bottom:1.4rem}
+.proj::before{content:"✦";position:absolute;left:calc(-2.2rem - 9px);top:1.1rem;color:var(--pink);background:var(--bg);font-size:1.1rem;line-height:1;padding:2px 0;text-shadow:0 0 12px var(--pink)}
+.proj .when{color:var(--lav);font-size:.9rem;margin-bottom:.2rem}
+.proj h3{font-size:1.55rem;color:var(--star)}
+.proj p{margin:.4rem 0 .7rem;max-width:60ch}
+.proj .chips{margin-top:0}
+.proj .chip{font-size:.8rem;padding:.1rem .7rem}
+
+/* stage + contact */
+.stage{text-align:center;border:1px solid var(--pink);border-radius:24px;padding:2.4rem 1.5rem;background:linear-gradient(160deg,rgba(255,159,208,.1),rgba(185,166,255,.06))}
+.stage p{margin:.6rem auto 0;max-width:52ch}
+.links{display:flex;flex-wrap:wrap;gap:.8rem}
+.links a{padding:.6rem 1.3rem;border:1px solid var(--line);border-radius:999px;text-decoration:none;background:var(--card)}
+.links a:hover{border-color:var(--pink)}
+footer{text-align:center;color:var(--muted);font-size:.88rem;padding:4rem 1rem 3rem}
+@media(prefers-reduced-motion:no-preference){
+  h1{animation:glow 5s ease-in-out infinite alternate}
+  @keyframes glow{from{text-shadow:0 0 25px rgba(255,159,208,.2)}to{text-shadow:0 0 55px rgba(255,159,208,.5)}}
+}
+</style>
+</head>
+<body>
+<canvas id="sky" aria-hidden="true"></canvas>
+
+<nav aria-label="Navigation">
+  <a href="#presentation">Présentation</a>
+  <a href="#diplomes">Diplômes</a>
+  <a href="#competences">Compétences</a>
+  <a href="#projets">Projets</a>
+  <a href="#veille">Veille</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<main>
+  <header class="hero" id="presentation">
+    <p class="hi">Bonjour, je suis</p>
+    <h1>Nayla <span>Altinsoy</span></h1>
+    <p class="role">Étudiante en 1<sup>re</sup> année de BTS SIO option SLAM (développement d'applications) au CNED, et à la recherche d'un stage de 5 semaines.</p>
+    <div class="chips">
+      <span class="chip">BTS SIO SLAM</span>
+      <span class="chip">C#</span>
+      <span class="chip">Python</span>
+      <span class="chip">Web</span>
+      <span class="chip">After Effects</span>
+      <span class="chip hot">Cherche un stage</span>
+    </div>
+  </header>
+
+  <section class="about" aria-labelledby="t-about">
+    <h2 id="t-about">À <i>propos</i></h2>
+    <p class="sub">Une passionnée d'informatique qui apprend chaque jour.</p>
+    <p>L'informatique m'attire depuis toujours. Après un bac général (spécialités HGGSP et SES), j'ai décidé d'en faire mon métier et je me suis lancée en BTS SIO option SLAM, en formation à distance au CNED.</p>
+    <p>Je débute, mais j'aime comprendre comment les choses fonctionnent, créer des programmes et leur donner un rendu soigné. J'ai aussi un côté créatif grâce à After Effects, que j'aimerais mêler au développement.</p>
+    <p>Cette année, je cherche un stage de 5 semaines dans un service informatique, une agence web ou une entreprise de développement pour découvrir le métier sur le terrain.</p>
+  </section>
+
+  <section id="diplomes" aria-labelledby="t-dip">
+    <h2 id="t-dip">Diplômes et <i>certifications</i></h2>
+    <p class="sub">Mon parcours jusqu'ici.</p>
+    <div class="grid">
+      <article class="card">
+        <h3>BTS SIO option SLAM</h3>
+        <p class="meta">CNED · Solutions logicielles et applications métiers</p>
+        <span class="tag now">En cours · 1<sup>re</sup> année</span>
+      </article>
+      <article class="card">
+        <h3>Baccalauréat général</h3>
+        <p class="meta">Spécialités HGGSP et SES</p>
+        <span class="tag">Obtenu</span>
+      </article>
+      <article class="card">
+        <h3>PIX</h3>
+        <p class="meta">Certification des compétences numériques</p>
+        <span class="tag">Obtenue</span>
+      </article>
+    </div>
+  </section>
+
+  <section id="competences" aria-labelledby="t-comp">
+    <h2 id="t-comp">Mes <i>compétences</i></h2>
+    <p class="sub">Ce que je sais déjà faire et ce que j'apprends cette année.</p>
+    <div class="skills">
+      <article class="card">
+        <h3>Acquises</h3>
+        <div class="chips">
+          <span class="chip">C#</span>
+          <span class="chip">Python</span>
+          <span class="chip">Java</span>
+          <span class="chip">PHP</span>
+          <span class="chip">SQL</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
+          <span class="chip">After Effects</span>
+        </div>
+        <small>Des bases solides à consolider avec les projets de l'année.</small>
+      </article>
+      <article class="card">
+        <h3>En cours d'acquisition</h3>
+        <div class="chips">
+          <span class="chip hot">Algorithmique</span>
+          <span class="chip hot">Programmation orientée objet</span>
+          <span class="chip hot">Git et GitHub</span>
+          <span class="chip hot">Cybersécurité et RGPD</span>
+        </div>
+        <small>Au programme du BTS SIO SLAM.</small>
+      </article>
+      <article class="card">
+        <h3>Outils et environnements</h3>
+        <div class="chips">
+          <span class="chip">GitHub</span>
+          <span class="chip">VS Code</span>
+          <span class="chip">Eclipse</span>
+          <span class="chip">NetBeans</span>
+          <span class="chip">PyCharm</span>
+          <span class="chip">VirtualBox</span>
+          <span class="chip">WampServer</span>
+          <span class="chip">WordPress</span>
+        </div>
+        <small>Mon quotidien pour coder, tester et héberger en local.</small>
+      </article>
+    </div>
+  </section>
+
+  <section id="projets" aria-labelledby="t-proj">
+    <h2 id="t-proj">Mes <i>projets</i></h2>
+    <p class="sub">Mon portfolio commence ici : voici les projets que je prévois de réaliser cette année, dans l'ordre. Je les remplacerai par les réalisations terminées au fil de l'année.</p>
+    <div class="path">
+      <article class="proj">
+        <p class="when">Début d'année</p>
+        <h3>Ce portfolio</h3>
+        <p>Mon premier site : me présenter, lister mes compétences et y ajouter chaque projet terminé.</p>
+        <div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span></div>
+      </article>
+      <article class="proj">
+        <p class="when">Automne</p>
+        <h3>Jeu de devinettes en console</h3>
+        <p>Un petit jeu en C# avec niveaux de difficulté et score, pour maîtriser variables, boucles, conditions et fonctions.</p>
+        <div class="chips"><span class="chip">C#</span><span class="chip">Algorithmique</span></div>
+      </article>
+      <article class="proj">
+        <p class="when">Hiver</p>
+        <h3>Gestionnaire de tâches</h3>
+        <p>Une application pour ajouter, modifier et supprimer des tâches, avec les données enregistrées dans une base SQL.</p>
+        <div class="chips"><span class="chip">C#</span><span class="chip">SQL</span><span class="chip">POO</span></div>
+      </article>
+      <article class="proj">
+        <p class="when">Hiver</p>
+        <h3>Script Python d'automatisation</h3>
+        <p>Un outil qui trie et renomme des fichiers automatiquement, pour gagner du temps au quotidien.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">Fichiers</span></div>
+      </article>
+      <article class="proj">
+        <p class="when">Printemps</p>
+        <h3>Site web dynamique avec connexion</h3>
+        <p>Un site avec comptes utilisateurs et base de données, en appliquant les bonnes pratiques de sécurité et le RGPD.</p>
+        <div class="chips"><span class="chip">PHP</span><span class="chip">SQL</span><span class="chip">Sécurité</span></div>
+      </article>
+      <article class="proj">
+        <p class="when">Printemps</p>
+        <h3>Mon stage de 5 semaines</h3>
+        <p>Découvrir le métier en entreprise, puis en tirer un compte rendu pour mon portfolio.</p>
+        <div class="chips"><span class="chip hot">Stage</span><span class="chip">Rapport</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="veille" aria-labelledby="t-veille">
+    <h2 id="t-veille">Ma veille <i>technologique</i></h2>
+    <p class="sub">Je collecte et classe mes sources sur l'actualité informatique pour rester à jour.</p>
+    <div class="links">
+      <a href="https://www.pearltrees.com/_aesu" target="_blank" rel="noopener">Voir ma veille sur Pearltrees</a>
+    </div>
+  </section>
+
+  <section aria-labelledby="t-stage">
+    <div class="stage">
+      <h2 id="t-stage">Je cherche un <i>stage</i></h2>
+      <p>5 semaines, en lien avec le développement ou l'informatique. Motivée, curieuse et prête à apprendre. N'hésitez pas à me contacter.</p>
+    </div>
+  </section>
+
+  <section id="contact" aria-labelledby="t-contact">
+    <h2 id="t-contact">Me <i>contacter</i></h2>
+    <p class="sub">Mes liens.</p>
+    <div class="links">
+      <a href="mailto:inhaaltinsoy@gmail.com">inhaaltinsoy@gmail.com</a>
+      <a href="https://github.com/mashussylveon" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/inha-altinsoy-35a40643b/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 Nayla Altinsoy · BTS SIO SLAM</footer>
+
+<script>
+(function(){
+  var c=document.getElementById('sky'),x=c.getContext('2d'),stars=[],W,H;
+  var cols=['255,241,250','255,159,208','185,166,255'];
+  var still=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function init(){
+    W=c.width=innerWidth;H=c.height=innerHeight;
+    var n=Math.floor(W*H/5500);stars=[];
+    for(var i=0;i<n;i++)stars.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.3+.2,
+      p:Math.random()*6.28,s:Math.random()*.02+.005,c:cols[Math.random()<.7?0:Math.floor(Math.random()*3)],
+      sp:Math.random()<.04});
+  }
+  function star(s,a){
+    x.fillStyle='rgba('+s.c+','+a+')';
+    if(s.sp){ // petites étoiles scintillantes à 4 branches
+      var l=s.r*5;x.beginPath();
+      x.moveTo(s.x,s.y-l);x.quadraticCurveTo(s.x,s.y,s.x+l,s.y);
+      x.quadraticCurveTo(s.x,s.y,s.x,s.y+l);x.quadraticCurveTo(s.x,s.y,s.x-l,s.y);
+      x.quadraticCurveTo(s.x,s.y,s.x,s.y-l);x.fill();
+    }else{x.beginPath();x.arc(s.x,s.y,s.r,0,6.28);x.fill();}
+  }
+  function draw(){
+    x.clearRect(0,0,W,H);
+    for(var i=0;i<stars.length;i++){var s=stars[i];s.p+=s.s;star(s,.45+.45*Math.sin(s.p));}
+    if(!still)requestAnimationFrame(draw);
+  }
+  addEventListener('resize',function(){init();if(still)draw();});
+  init();draw();
+})();
+</script>
+</body>
+</html>
